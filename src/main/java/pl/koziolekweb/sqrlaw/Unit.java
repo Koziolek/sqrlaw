@@ -8,4 +8,5 @@ public interface Unit {
 
 	int armourSave();
 
+	int toughness();
 }

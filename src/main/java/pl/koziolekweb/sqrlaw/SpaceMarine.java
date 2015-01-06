@@ -11,6 +11,15 @@ public abstract class SpaceMarine implements Unit {
 		};
 	}
 
+	public static SpaceMarine withHeavyBolter() {
+		return new SpaceMarine() {
+			@Override
+			public int weponStrenght() {
+				return 7;
+			}
+		};
+	}
+
 	private SpaceMarine() {
 	}
 
@@ -24,6 +33,7 @@ public abstract class SpaceMarine implements Unit {
 		return 3;
 	}
 
+	@Override
 	public int toughness(){
 		return 4;
 	}

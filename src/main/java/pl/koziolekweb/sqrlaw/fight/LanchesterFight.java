@@ -30,11 +30,11 @@ public class LanchesterFight {
 	}
 
 	private Team round(Team att, Team def) {
-		long aHits = att.shot()
+		long wounds = att.shot()
 				.stream()
-				.filter(h -> h.toWound(def.randomMember().toHit()) >= Dice.K6.throwDice())
+				.filter(h -> Dice.K6.throwDice() >= h.toWound(def.randomMember().toughness()))
 				.count();
-		long aKilled = Dice.K6.throwDice(aHits)
+		long aKilled = Dice.K6.throwDice(wounds)
 				.stream()
 				.filter(t -> def.randomMember().armourSave() < t)
 				.count();
