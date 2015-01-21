@@ -14,6 +14,7 @@ public interface Dice {
 	public static final Dice K4 = () -> 4;
 	public static final Dice K6 = () -> 6;
 	public static final Dice K8 = () -> 8;
+	public static final Dice K10 = () -> 10;
 	public static final Dice K12 = () -> 12;
 	public static final Dice K20 = () -> 20;
 
